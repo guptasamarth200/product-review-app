@@ -36,3 +36,14 @@ cd frontend
 npm install
 npm start
 ```
+
+##📊 Entity-Relationship Diagram
+
+[Users] --------< (1:N) >-------- [Reviews] --------< (N:1) >-------- [Products]
+                             |
+                             |
+                             V
+                          [Tags]
+
+- A user can write only one review per product (enforced via UNIQUE constraint)
+- Reviews can optionally include tags (bonus feature)
